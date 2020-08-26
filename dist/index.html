@@ -20,7 +20,22 @@
     </div>
 
     <div id="todos"></div>
-
+    <script id="todo-template" type="text/x-handlebars-template">
+    {{#each todos}}
+    {{#if complete}}<div data-id={{id}} data-priority={{priority}} class="todo complete">
+            <i class="fas fa-check-circle"></i>
+            <span class=text>{{text}}</span>
+            <span class="delete"><i class="fas fa-trash"></i></span>
+        </div>{{else}}
+    <div data-id={{id}} data-priority={{priority}} class="todo">
+            <i class="fas fa-check-circle"></i>
+            <span class=text>{{text}}</span>
+            <span class="delete"><i class="fas fa-trash"></i></span>
+        </div>
+        {{/if}}
+    {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="/jquery/dist/jquery.js"></script>
     <script src="main.js"></script>
 </body>

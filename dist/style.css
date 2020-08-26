@@ -1,54 +1,75 @@
-body{
-    display: grid;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #ecf0f1
+body {
+  display: grid;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ecf0f1;
 }
 
-.user-input{
-    width: calc(100% - 20px);
-    display: grid;
-    justify-self: center;
-    grid-template-columns: 3fr 1fr;
+.user-input {
+  width: calc(100% - 20px);
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 3fr 1fr;
 }
 
-input{
-    padding: 5px;
-    font-family: 'Montserrat', sans-serif;
+input {
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
-button{
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
+button {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
-#todos{
-    display: grid;
-    justify-content: center
+#todos {
+  display: grid;
+  justify-content: center;
 }
 
-.todo{
-    width: 350px;
-    box-shadow: 1px 1px 3px black;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 3px;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    background-color: #7ed6df;
+.todo {
+  width: 350px;
+  box-shadow: 1px 1px 3px black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  background-color: #7ed6df;
 }
 
-.todo.complete .text{
-    text-decoration-line: line-through
+.todo.complete .text {
+  text-decoration-line: line-through;
 }
 
-.todo *{
-    display: grid;
-    align-content: center;
+.todo * {
+  display: grid;
+  align-content: center;
 }
 
-i{font-size: 0.6em; cursor: pointer; }
-i:active{font-size: 0.5em}
+i {
+  font-size: 0.6em;
+  cursor: pointer;
+}
+i:active {
+  font-size: 0.5em;
+}
 
-.fa-trash{color: #e74c3c}
-.fa-check-circle{color: #27ae60}
+.fa-trash {
+  color: #e74c3c;
+}
+.fa-check-circle {
+  color: #27ae60;
+}
+
+[data-priority="1"] {
+  background-color: rgb(140, 196, 140);
+}
+
+[data-priority="2"] {
+  background-color: rgb(206, 153, 94);
+}
+
+[data-priority="3"] {
+  background-color: rgb(167, 58, 58);
+}
